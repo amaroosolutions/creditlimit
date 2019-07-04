@@ -140,7 +140,7 @@ class sale_order(models.Model):
 
     @api.multi
     def send_mail_approve_credit_limit(self): 
-        manager_group_id = self.env['ir.model.data'].get_object_reference('sales_team', 'group_sale_manager')[1]
+        manager_group_id = self.env['ir.model.data'].get_object_reference ('__export__','res_groups_70_978df68e')[1]
         browse_group = self.env['res.groups'].browse(manager_group_id) 
         
         url = self._make_url('sale.order')
